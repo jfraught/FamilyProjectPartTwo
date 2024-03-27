@@ -13,6 +13,7 @@ struct FamilyMember: Equatable {
     var birthday: Date?
     var bio: String?
     var photo: UIImage?
+    var id = UUID()
 
     static var myFamily: [FamilyMember] {
         return [
@@ -31,6 +32,6 @@ struct FamilyMember: Equatable {
     }
 
     static func ==(rhs: FamilyMember, lhs: FamilyMember) -> Bool {
-        rhs.name == lhs.name
+        rhs.id == lhs.id
     }
 }
